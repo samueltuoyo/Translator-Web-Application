@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script src="https://cdn.jsdelivr.net/npm/translate-js@1.3.0/src/translate.min.js"></script>
+    <meta name="description" content="translator Website for translating text from one language to another">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Language Translator</title>
+</head>
+<body>
+     <header class="header bg-dark text-light p-4">
+         <h1 class="fs-1 text-center">Translate Me</h1>
+     </header>
+     
+     <section class="container mt-5">
+         <div>
+             <h2>Enter Text</h2>
+             <input type="text" id="input" class="border-#ccc p-3 w-100">
+             <button type="button" id="btn" class="btn fs-2 mt-3 w-100 p-3 bg-dark text-center text-light border-0">Translate <i class="fas fa-recycle"></i></button>
+             <p id="translated-text" class="text-center fs-1 mt-3 font-weight-bold"></p>
+         </div>
+     </section>
+     
+     <footer class="footer container text-center fixed-bottom p-4 d-flex justify-content-center flex-column bg-light">    
+         <div class="d-flex justify-content-between">
+              <button type="button" class="btn bg-dark text-light fs-2 switch-lang">English</button> <i class="fas fa-recycle fs-2 p-3"></i> <button class="btn bg-dark text-light fs-2 switch-lang">French</button>
+               <dialog id="dialog" class="w-100 h-75">
+               <ul class="list-unstyled">
+                <li data-value="en">English</li>
+                <li data-value="es">Spanish</li>
+                <li data-value="fr">French</li>
+                <li data-value="de">German</li>
+                <li data-value="zh">Chinese</li>
+                <li data-value="it">Italian</li>
+                <li data-value="pt">Portuguese</li>
+                <li data-value="nl">Dutch</li>
+                <li data-value="ru">Russian</li>
+                <li data-value="ja">Japanese</li>
+                <li data-value="ko">Korean</li>
+                <li data-value="ar">Arabic</li>
+                <li data-value="he">Hebrew</li>
+                <li data-value="hi">Hindi</li>
+                <li data-value="sv">Swedish</li>
+                <li data-value="da">Danish</li>
+                <li data-value="no">Norwegian</li>
+                <li data-value="pl">Polish</li>
+                <li data-value="el">Greek</li>
+                <li data-value="tr">Turkish</li>
+                <li data-value="vi">Vietnamese</li>
+            </ul>
+          </dialog>
+         </div>
+         
+         <div class="bg-dark text-center text-light rounded-circle w-25 h-25 py-4 mx-auto" id="speech-record-button">
+              <i class="fas fa-microphone fs-1"></i>
+         </div>
+     </footer>
+     
+     <script src="app.js"></script>
+</body>
+</html>
