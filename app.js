@@ -8,17 +8,12 @@ const SelectLangChoice = document.querySelectorAll('ul li')
 let translateFrom
 let translateTo
 let buttons
-
-
 TranslateButtons.forEach((button) => {
     button.addEventListener('click', () => {
         buttons = button 
         selectLanguage.showModal()
     })
 })
-
-
-
 SelectLangChoice.forEach((choice) => {
     choice.addEventListener('click', () => {
         translateFrom = choice.getAttribute('data-value').toString()
@@ -27,9 +22,6 @@ SelectLangChoice.forEach((choice) => {
         selectLanguage.close()
     })
 })
-
-
-
 function initialize() {
   const speech = new (window.SpeechRecognition || window.webkitSpeechRecognition)()
   speech.onresult = (event) => {
@@ -38,9 +30,6 @@ function initialize() {
   };
   speech.start()
 }
-
-
-
 function fetchLang(text){
     if (!input.value) {
         TranslatedText.textContent = 'Type in something please '
@@ -56,13 +45,7 @@ function fetchLang(text){
     input.value = ''
   })}
 }
-
-
-
 btn.addEventListener('click', () => {
     fetchLang(input.value)
 })
-
-
-
 recBtn.addEventListener('click', initialize)
