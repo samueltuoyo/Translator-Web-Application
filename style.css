@@ -1,0 +1,43 @@
+#speech-record-button:hover{
+    animation: blur 1s infinite;
+}
+
+@keyframes blur{
+    from{
+        opacity: 0.6;
+        border: 8px solid blue;
+    }
+    
+    to{
+        opacity: 1;
+        border: 3px solid blue;
+    }
+}
+
+
+dialog::backdrop{
+    background: rgba(0,0,0, 0.8);
+}
+
+dialog:focus{
+    outline-color: #333;
+}
+
+ul li{
+    padding: 10px 0;
+}
+
+ul li:hover{
+    transform: scale(2);
+    transition: 0.5s;
+}
+
+dialog{
+    background: #333;
+    color: #fff;
+    padding: 0;
+}
+
+dialog li{
+    border-bottom: 2px solid #fff;
+}
